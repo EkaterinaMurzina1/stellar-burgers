@@ -2,8 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getFeedsApi, getOrderByNumberApi } from '@api';
 import { TOrder } from '@utils-types';
 
-//экшн
-
 export const getFeeds = createAsyncThunk('order/getFeeds', async () => {
   const res = await getFeedsApi();
   return res;
@@ -33,7 +31,6 @@ const initialState: FeedsState = {
   previewOrder: null
 };
 
-// Slice
 const feedsSlice = createSlice({
   name: 'feeds',
   initialState,

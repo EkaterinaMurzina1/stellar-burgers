@@ -24,24 +24,20 @@ export const OrderInfo: FC = () => {
         (order) => order.number === parseInt(number!)
       );
       if (foundOrder) {
-        console.log('Order found in user history:', foundOrder);
         return foundOrder;
       }
     }
-    console.log('Order not found in history, using orderData:', orderData);
     return orderData;
   }, [userOrders, orderData, number]);
 
   useEffect(() => {
     if (number && !order) {
-      console.log('Dispatching getOrderByNumber for:', number);
       dispatch(getOrderByNumber(parseInt(number)));
     }
   }, [number, order, dispatch]);
 
   const orderInfo = useMemo(() => {
     if (!order || !ingredients.length) {
-      console.log('No order or ingredients for orderInfo');
       return null;
     }
 

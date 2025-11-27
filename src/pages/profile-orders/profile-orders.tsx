@@ -10,7 +10,6 @@ import {
 
 export const ProfileOrders: FC = () => {
   const orders: TOrder[] = useSelector(selectUserOrders);
-  const isLoading = useSelector(selectUserLoading);
   const dispatch = useDispatch();
 
   useEffect(() => {

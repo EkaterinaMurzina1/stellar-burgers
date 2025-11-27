@@ -17,11 +17,10 @@ export const ProtectedRoute = ({
   children
 }: TProtectedRouteProps) => {
   const isAuthChecked = useSelector(selectIsAuthenticated);
-  const isLoading = useSelector(selectUserLoading);
   const user = useSelector(selectUser);
   const location = useLocation();
 
-  if (!isAuthChecked || isLoading) {
+  if (!isAuthChecked) {
     return <Preloader />;
   }
 

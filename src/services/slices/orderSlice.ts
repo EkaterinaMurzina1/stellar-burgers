@@ -1,4 +1,3 @@
-// services/slices/orderSlice.ts
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TOrder } from '@utils-types';
 import {
@@ -7,7 +6,6 @@ import {
   getOrdersApi,
   getFeedsApi
 } from '@api';
-import { getCookie } from '../../utils/cookie';
 export interface TOrderState {
   orderRequest: boolean;
   orderModalData: TOrder | null;
@@ -47,10 +45,6 @@ const orderSlice = createSlice({
         state.orderRequest = false;
         state.orderModalData = action.payload.order;
       });
-    // .addCase(createOrder.rejected, (state, action) => {
-    //   state.isLoading = false;
-    //   state.error = action.error.message || 'Не удалось создать заказ';
-    // })
   }
 });
 export const orderReducer = orderSlice.reducer;

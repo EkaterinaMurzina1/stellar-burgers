@@ -1,4 +1,3 @@
-// services/slices/constructorSlice.ts
 import { PayloadAction, createSlice, nanoid } from '@reduxjs/toolkit';
 import { TIngredient, TConstructorIngredient } from '@utils-types';
 

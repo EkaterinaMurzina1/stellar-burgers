@@ -28,12 +28,3 @@ export const FeedInfo: FC = () => {
     />
   );
 };
-
-// selectors:{
-// selectFeedState: (state) => state,
-//selectFeedsOrders: (state) => state.orders,
-// selectFeedsTotal :(state) => state.total,
-// selectFeedsTotalToday: (state) => state.totalToday,
-// selectFeedsLoading: (state) => state.isLoading,
-// selectpreviewOrder: (state) => state.previewOrder
-//
