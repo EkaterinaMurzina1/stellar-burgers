@@ -11,7 +11,7 @@ export interface TOrderState {
   orderModalData: TOrder | null;
 }
 
-const initialState: TOrderState = {
+export const initialState: TOrderState = {
   orderRequest: false,
   orderModalData: null
 };
@@ -24,7 +24,7 @@ export const createOrder = createAsyncThunk(
   }
 );
 
-const orderSlice = createSlice({
+export const orderSlice = createSlice({
   name: 'order',
   initialState,
   reducers: {
