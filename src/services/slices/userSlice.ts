@@ -20,7 +20,7 @@ export interface TUserState {
   userOrders: TOrder[];
 }
 
-const initialState: TUserState = {
+export const initialState: TUserState = {
   user: null,
   isAuthenticated: false,
   isLoading: false,
@@ -94,7 +94,7 @@ export const getUserOrders = createAsyncThunk(
   }
 );
 
-const userSlice = createSlice({
+export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {

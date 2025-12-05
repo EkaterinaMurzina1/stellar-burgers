@@ -23,7 +23,7 @@ export interface FeedsState {
   previewOrder: TOrder | null;
 }
 
-const initialState: FeedsState = {
+export const initialState: FeedsState = {
   orders: [],
   total: 0,
   totalToday: 0,
@@ -31,7 +31,7 @@ const initialState: FeedsState = {
   previewOrder: null
 };
 
-const feedsSlice = createSlice({
+export const feedsSlice = createSlice({
   name: 'feeds',
   initialState,
   reducers: {},
