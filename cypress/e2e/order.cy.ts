@@ -54,10 +54,15 @@ describe('Создание заказа', function () {
     cy.intercept('POST', '**/orders').as('createOrder');
 
     cy.wait('@createOrder').its('response.statusCode').should('eq', 200);
+    cy.get('#modals [test-id=number-order]').should('contain', '123456');
     cy.get('#modals button[aria-label="Закрыть"]').click();
     cy.get('[test-id=constructor]').contains('Выберите булки').should('exist');
     cy.get('[test-id=constructor]')
       .contains('Выберите начинку')
       .should('exist');
   });
+  afterEach(function () {
+  cy.clearAllLocalStorage();
+  cy.clearCookies();
+});
 });

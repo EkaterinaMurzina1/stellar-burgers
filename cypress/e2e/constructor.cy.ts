@@ -77,4 +77,5 @@ describe('Модальное окно ингредиента', function () {
     cy.get('[test-id=modal-overlay]').click({ force: true });
     cy.contains('Детали ингредиента').should('not.exist');
   });
+  
 });
